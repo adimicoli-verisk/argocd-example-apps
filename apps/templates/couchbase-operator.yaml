@@ -1,22 +1,22 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: couchbase-operator
-  # namespace: argocd
-  namespace: default
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: default
-    server: {{ .Values.spec.destination.server }}
-  project: default
-  source:
-    path: charts/couchbase-operator
-    repoURL: {{ .Values.spec.cb_source.repoURL }}
-    targetRevision: {{ .Values.spec.cb_source.targetRevision }}
-  syncPolicy:
-      automated:
-        prune: true
-        allowEmpty: true
-        selfHeal: true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: couchbase-operator
+#   # namespace: argocd
+#   namespace: default
+#   finalizers:
+#   - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     namespace: default
+#     server: {{ .Values.spec.destination.server }}
+#   project: default
+#   source:
+#     path: charts/couchbase-operator
+#     repoURL: {{ .Values.spec.cb_source.repoURL }}
+#     targetRevision: {{ .Values.spec.cb_source.targetRevision }}
+#   syncPolicy:
+#       automated:
+#         prune: true
+#         allowEmpty: true
+#         selfHeal: true
