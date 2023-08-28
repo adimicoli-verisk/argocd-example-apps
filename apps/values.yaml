@@ -5,3 +5,6 @@ spec:
     # repoURL: https://github.com/argoproj/argocd-example-apps
     repoURL: https://github.com/adimicoli-verisk/argocd-example-apps.git
     targetRevision: HEAD
+  cb_source:
+    repoURL: https://github.com/couchbase-partners/helm-charts.git
+    targetRevision: HEAD
